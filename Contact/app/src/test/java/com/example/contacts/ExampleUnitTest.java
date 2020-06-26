@@ -1,4 +1,4 @@
-package com.example.room;
+package com.example.contacts;
 
 import org.junit.Test;
 

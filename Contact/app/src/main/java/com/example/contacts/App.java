@@ -1,4 +1,4 @@
-package com.example.room;
+package com.example.contacts;
 
 import android.app.Application;
 
@@ -7,12 +7,12 @@ import androidx.room.Room;
 public class App extends Application {
 
     public static App app;
-    public static DB db;
+    public DB db;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        app=this;
-        db = Room.databaseBuilder(this, DB.class, "contacts").build();
+        app = this;
+        db = Room.databaseBuilder(this, DB.class, "db").fallbackToDestructiveMigration().build();
     }
 }

@@ -1,4 +1,4 @@
-package com.example.room;
+package com.example.contacts;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.room", appContext.getPackageName());
+        assertEquals("com.example.contacts", appContext.getPackageName());
     }
 }
