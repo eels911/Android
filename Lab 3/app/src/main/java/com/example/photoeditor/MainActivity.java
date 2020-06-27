@@ -25,7 +25,6 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
     private static final int CAMERA_REQUEST = 0;
-    private static final int CAMERA_PERMISSION_REQUEST_CODE = 0;
     private static final int PICTURE_CROP = 1;
     private ImageView imageView;
     private Uri photoUri;
@@ -61,16 +60,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case CAMERA_PERMISSION_REQUEST_CODE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                } else {
-                    Toast.makeText(this, "Невозможно кадрировать", Toast.LENGTH_LONG).show();
-                }
-        }
-    }
     private void getFullPhoto() {
         Intent cameraIntent = new Intent();
         cameraIntent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
